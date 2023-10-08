@@ -1,0 +1,23 @@
+@import "src/assets/variables-first-task.scss";
+
+.layout-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: $primary-color;
+
+    .content-wrapper{
+        padding: 0px 240px;
+
+        .header{
+
+        }
+
+        .main{
+
+        }
+
+        .footer{
+
+        }
+    }
+}

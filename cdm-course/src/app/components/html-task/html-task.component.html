@@ -1,0 +1,120 @@
+<div class="layout-wrapper">
+  <div class="media-wrapper">
+    <h2 class="title">Примеры встраиваемых ресурсов</h2>
+    <!-- img -->
+    <img src="assets/test-image.jpg" alt="Тестовое изображение">
+    <!-- iframe with map -->
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?azimuth=0.0040906154343631086&ll=45.182971%2C54.186039&mode=whatshere&tilt=0.14847484077116105&whatshere%5Bpoint%5D=45.181966%2C54.185942&whatshere%5Bzoom%5D=17&z=18.37"
+      width="560" height="400" frameborder="1" allowfullscreen="true">
+      Ваш браузер не поддерживает воспроизведение карты.
+    </iframe>
+    <!-- iframe with video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cjs-sfPoWWU?si=Wh2k9CAjc38Gi5DD"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+      Ваш браузер не поддерживает воспроизведение видео.
+    </iframe>
+    <!-- audio -->
+    <audio controls>
+      <source src="assets/source/test.mp3" type="audio/mpeg" />
+        Ваш браузер не поддерживает HTML5 аудио. Вот взамен
+    </audio>
+  </div>
+  <div class="form-wrapper">
+    <h2 class="title">Пример формы со всеми доступными контролами</h2>
+    <form class="simple-form">
+      <!-- text -->
+      <label for="name">
+        <span class="fa-regular fa-user"></span>
+        Имя:
+      </label>
+      <input class="text-input" type="text" id="name" name="name" required minlength="4" maxlength="50">
+      <!-- email -->
+      <label for="email">
+        <span class="fa-solid fa-cloud"></span>
+        Email:
+      </label>
+      <input class="text-input" type="email" id="email" name="email" required>
+      <!-- password -->
+      <label for="password">
+        <span class="fa-solid fa-eye"></span>
+        Пароль:
+      </label>
+      <input class="text-input" type="password" id="password" name="password" required minlength="8"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$">
+      <!-- search -->
+      <label for="search">
+        <span class="fa-solid fa-magnifying-glass"></span>
+        Поиск:
+      </label>
+      <input class="text-input" type="search" name="search" id="search">
+      <!-- tel -->
+      <label for="tel">
+        <span class="fa-solid fa-phone"></span>
+        Номер телефона:
+      </label>
+      <input class="text-input" type="tel" name="tel" id="tel" pattern="[0-9]*" placeholder="8 (900) 123-45-67">
+      <!-- url -->
+      <label for="url">
+        URL:
+      </label>
+      <input class="text-input" type="url" name="url" id="url">
+      <!-- date -->
+      <label for="dob">Дата рождения:</label>
+      <input type="date" id="dob" name="dob" required>
+      <!-- time -->
+      <label for="time">Время:</label>
+      <input type="time" id="time" name="time" required>
+      <!-- number -->
+      <label for="number">Введите число:</label>
+      <input class="text-input" type="number" id="number" name="number" required>
+      <!-- hidden -->
+      <input type="hidden" id="hidden" name="hidden" required>
+      <!-- range -->
+      <label for="volume">Range:</label>
+      <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+      <!-- color -->
+      <label for="color">Выберите цвет:</label>
+      <input type="color" id="color" name="color" value="#17D31B">
+      <!-- checkbox -->
+      <fieldset>
+        <legend>Выберите ваше хобби:</legend>
+        <div class="checkbox-wrapper">
+          <label>
+            <input type="checkbox" name="hobbies" value="hobby1"> Хобби 1
+          </label>
+          <label>
+            <input type="checkbox" name="hobbies" value="hobby2"> Хобби 2
+          </label>
+          <label>
+            <input type="checkbox" name="hobbies" value="hobby3"> Хобби 3
+          </label>
+        </div>
+      </fieldset>
+      <!-- radio -->
+      <fieldset>
+        <legend>Выберите вариант:</legend>
+        <div class="radio-wrapper">
+          <label>
+            <input type="radio" name="radio-option" value="option1"> Опция 1
+          </label>
+          <label>
+            <input type="radio" name="radio-option" value="option2"> Опция 2
+          </label>
+          <label>
+            <input type="radio" name="radio-option" value="option3"> Опция 3
+          </label>
+        </div>
+      </fieldset>
+      <!-- file -->
+      <input type="file" id="file-input" name="file-input" accept="image/*">
+      <!-- reset/submit -->
+      <div class="controls">
+        <input class="form-button" type="reset" value="Сбросить">
+        <input class="form-button" type="submit" value="Отправить">
+      </div>
+    </form>
+  </div>
+</div>
