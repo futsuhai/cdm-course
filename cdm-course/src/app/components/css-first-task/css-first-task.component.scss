@@ -1,8 +1,33 @@
 @import "src/assets/variables-first-task.scss";
 
 .layout-wrapper {
+  /* Scss переменные стоит юзать для удобство в границах одного файла, если переменная используется во многих файлах, то лучше использовать css переменные.
+  https://stackoverflow.com/questions/67016460/difference-between-scss-variables-and-css-variables
+  */
+
     background: $primary-color;
 
+    /*Вот тут в корне неверно. Если использовать такую вложеность то получится, что селектор .content-wrapper при переходе в css будет выглядеть так
+      ".layout-wrapper .content-wrapper" то есть стили будут задаваться только когда .content-wrapper находится внутри .layout-wrapper, так быть не должно (см 50 строку в index.html)
+      Каждый блок должен быть отдельным классов, ни во что не вложенным.
+      Если ты хочешь использовать синтаксический сахар scss То должно быть, например, вот так.
+                        .menu-list-item {
+                            &__link {
+                                 color: $secondary-color;
+                                padding: 0.5rem;
+                            }
+                        }
+
+
+                        а не
+
+                         .menu-list-item {
+                            .menu-list-item__link {
+                                color: $secondary-color;
+                                padding: 0.5rem;
+                            }
+                        }
+      */
     .content-wrapper {
         width: 100vw;
         height: 100vh;
@@ -79,6 +104,11 @@
         }
 
         .breadcrumb {
+            /*
+             БЭМ блок не должен задавать внешнюю геометрию. Пофиксить надо везде.
+             Фиксится так: в месте где лежит этот блок, задается элемент родительского блока и уже ему эта геометрия задается
+             Например в данном кейсе margin будет у класса content-wrapper__breadcrumb
+            */
             margin-top: 65px;
             padding: 0.5rem $padding-layout;
             background: $background-secondary;

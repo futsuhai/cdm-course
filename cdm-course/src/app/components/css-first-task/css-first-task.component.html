@@ -1,5 +1,7 @@
+<!--Не вижу смысла в двух врапперах, достаточно одного-->
 <div class="layout-wrapper">
     <div class="content-wrapper">
+      <!--Fixed плохое название + нигде не используется-->
         <header class="header fixed">
             <div class="logo">
                 <img src="assets/css1/logo.svg" alt="logo" class="logo__image">
@@ -8,7 +10,7 @@
                 <nav class="menu">
                     <ul class="menu-list">
                         <li class="menu-list-item">
-                            <a href="#" class="menu-list-item__link">
+                            <a href="#" class="menu-list-item__link"><!--Тут БЭМ использован хорошо-->
                                 References
                             </a>
                         </li>
@@ -39,13 +41,17 @@
                         </li>
                     </ul>
                 </nav>
+
                 <div class="controls">
                     <button class="controls__btn btn">
                         <i class="fa-solid fa-moon"></i>
                         Theme
                     </button>
+                      <!--Если у тебя блок в блоке, то он не обязан содержать в названии название родительского блока.
+                      Тут достаточно просто search-bar. Суть блоков в бэме, в том, что они не привязаны к своему окружению. То есть ты можешь просто скопипастить этот блок, вставить куда угодно и он будет идеально выглядеть.
+                       По той же причине блоку нельзя задавать внешнюю геометрию (margin и тп). -->
                     <div class="controls-search">
-                        <input class="controls-search__item" type="text">
+                        <input class="controls-search__item" type="text"> <!--Тут норм применён бэм-->
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <a class="controls__auth" href="#">Log in</a>
