@@ -1,0 +1,12 @@
+.breadcrumb-list {
+    display: flex;
+    gap: 16px;
+    color: var(--secondary-color);
+    &__link {
+        color: var(--secondary-color);
+    }
+
+    &__icon {
+        margin-left: 16px;
+    }
+}

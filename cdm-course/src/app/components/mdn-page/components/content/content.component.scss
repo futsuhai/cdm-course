@@ -1,0 +1,11 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .content__title {
+        font-weight: 700;
+        font-size: 2.25rem;
+        color: var(--white);
+    }
+}

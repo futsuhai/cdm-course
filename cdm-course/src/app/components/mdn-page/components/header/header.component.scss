@@ -1,0 +1,27 @@
+.header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        align-items: center;
+
+        .menu {
+            .menu-list {
+                display: flex;
+                gap: 16px;
+
+                .menu-item {
+                    &__link {
+                        color: var(--secondary-color);
+                        padding: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

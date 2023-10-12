@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .footer-nav {
+        &_margin {
+            margin-bottom: 16px;
+        }
+    }
+
+    .divider {
+        background-color: var(--secondary-color);
+        height: 1px;
+    }
+}

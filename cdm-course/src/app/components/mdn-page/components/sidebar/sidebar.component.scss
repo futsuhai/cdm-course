@@ -1,0 +1,41 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .input {
+        display: flex;
+        gap: 8px;
+        border-radius: 16px;
+        width: 80px;
+
+        &_wrapper {
+            margin-top: 8px;
+            padding: 4px 8px;
+            border: 1px solid var(--secondary-color);
+        }
+    }
+
+    .sidebar__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .menu {
+        &__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &__link {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}

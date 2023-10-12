@@ -1,0 +1,22 @@
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: var(--secondary-color);
+
+    .sections__title {
+        font-size: 20px;
+    }
+
+    .sections-list {
+        .sections-list__item {
+            border-left: 2px solid var(--secondary-color);
+            padding: 0 0 16px 16px;
+
+            .sections-list__link {
+                color: var(--secondary-color);
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

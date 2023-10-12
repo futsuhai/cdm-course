@@ -1,0 +1,49 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+    .social {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .social-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &__item {
+                color: var(--secondary-color);
+                font-weight: 700;
+            }
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+
+            &__icon {
+                color: var(--secondary-color);
+            }
+        }
+    }
+
+    .menu {
+        .menu__heading {
+            margin-bottom: 16px;
+        }
+
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .list {
+                &__link {
+                    color: var(--secondary-color);
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
