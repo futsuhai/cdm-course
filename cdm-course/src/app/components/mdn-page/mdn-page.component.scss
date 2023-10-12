@@ -7,6 +7,7 @@
         background: var(--primary-color);
     }
 
+  /* Еще раз. Вложение класса в класс недопустимо по БЭМу (за редким исключением, а это не тот случай как раз) */
     .header {
         &_wrapper {
             width: 100vw;
@@ -57,3 +58,58 @@
         }
     }
 }
+
+
+/*
+Вот так должно быть, но правильным было бы объявить эти классы в соответствующих компонентах. То есть класс header был бы добавлен внутри компонента <app-header>.
+Я  добавил небольшой пример в header.component.ts как это можно сделать.
+.header {
+  &_wrapper {
+    width: 100vw;
+    padding: 0 var(--padding-layout);
+    background: var(--primary-color);
+    position: fixed;
+    top: 0;
+  }
+}
+
+.breadcrumb {
+  &_wrapper {
+    display: block;
+    margin-top: 65px;
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    padding: 8px var(--padding-layout);
+    background: var(--background-secondary);
+  }
+}
+
+.main {
+  padding: 0 var(--padding-layout);
+  grid-gap: 48px;
+  display: grid;
+  gap: 48px;
+  grid-template-areas: "sidebar main sections";
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 15rem);
+
+  .content {
+    &_wrapper {
+      padding: 48px 0;
+    }
+  }
+
+  .sections {
+    &_wrapper {
+      padding-top: 48px;
+    }
+  }
+}
+
+.footer {
+  &_wrapper {
+    display: block;
+    padding: 32px var(--padding-layout);
+    background: var(--background-secondary);
+  }
+}
+*/
