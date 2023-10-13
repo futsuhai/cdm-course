@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/mdn-page/components/header/header.
 import { SectionsComponent } from './components/mdn-page/components/sections/sections.component';
 import { SidebarComponent } from './components/mdn-page/components/sidebar/sidebar.component';
 import { ControlsComponent } from './components/mdn-page/components/controls/controls.component';
+import { SidebarMenuComponent } from './components/mdn-page/components/sidebar-menu/sidebar-menu.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ControlsComponent } from './components/mdn-page/components/controls/con
     FooterNavComponent,
     HeaderComponent,
     SectionsComponent,
-    SidebarComponent
+    SidebarComponent,
+    SidebarMenuComponent
 
   ],
   imports: [

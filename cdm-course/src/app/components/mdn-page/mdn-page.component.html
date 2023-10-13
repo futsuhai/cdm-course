@@ -1,14 +1,10 @@
-<div class="content-wrapper content-wrapper_dark">
-  <!--Вот тут не совсем корректно.
-  Если wrapper - модификатор (а судя по тому что он отделен одним _, так оно и есть), то название плохое.
-  Если это элемент, то надо разделять двумя _ + блок не может быть одновременно и элементом ( и наоборот)
-   -->
-    <app-header class="header header_wrapper"></app-header>
-    <app-breadcrumb class="breadcrumb breadcrumb_wrapper"></app-breadcrumb>
+<div class="wrapper wrapper_theme_dark">
+    <app-header class="header_size_desktop"></app-header>
+    <app-breadcrumb class="breadcrumb_size_desktop"></app-breadcrumb>
     <main class="main">
-        <app-sidebar class="sidebar"></app-sidebar>
-        <app-content class="content content_wrapper"></app-content>
-        <app-sections class="sections sections_wrapper"></app-sections>
+        <app-sidebar></app-sidebar>
+        <app-content class="content_size_desktop"></app-content>
+        <app-sections class="sections_size_desktop"></app-sections>
     </main>
-    <app-footer class="footer footer_wrapper"></app-footer>
+    <app-footer class="footer_size_desktop"></app-footer>
 </div>
