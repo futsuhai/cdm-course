@@ -1,8 +1,19 @@
 .header {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
     height: 65px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 20px;
+
+    &__burger {
+        display: none;
+        color: var(--secondary-color);
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .navigation {
@@ -19,5 +30,25 @@
     &__link {
         color: var(--secondary-color);
         padding: 8px;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+    .list {
+        gap: 0px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .header {
+        justify-content: space-between;
+    
+        &__burger {
+            display: block;
+        }
+    }
+
+    .navigation {
+        display: none;
     }
 }

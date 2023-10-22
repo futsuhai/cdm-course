@@ -9,7 +9,7 @@
 
     &__header {
         width: 100vw;
-        padding: 0 var(--padding-layout);
+        padding: 0px 32px;
         background: var(--primary-color);
         position: fixed;
         top: 0;
@@ -20,19 +20,22 @@
         margin-top: 65px;
         border-top: 1px solid var(--white);
         border-bottom: 1px solid var(--white);
-        padding: 8px var(--padding-layout);
+        padding: 8px 32px;
         background: var(--background-secondary);
     }
 
     &__footer {
         display: block;
-        padding: 32px var(--padding-layout);
+        padding: 32px 32px;
         background: var(--background-secondary);
     }
 }
 
 .main {
-    padding: 0 var(--padding-layout);
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 32px;
     grid-gap: 48px;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 15rem);

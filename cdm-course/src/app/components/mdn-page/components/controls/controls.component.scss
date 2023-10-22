@@ -4,7 +4,14 @@
     gap: 20px;
 
     .controls__btn {
+        &_theme {
+            padding: 0px 4px;
+        }
+
         &_white {
+            padding: 8px 8px;
+            font-size: 14px;
+            border-radius: 4px;
             background: var(--white);
             color: var(--primary-color);
         }
@@ -29,5 +36,11 @@
 
     .search__item {
         width: 40px;
+    }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) {
+    .control {
+        gap: 8px;
     }
 }
