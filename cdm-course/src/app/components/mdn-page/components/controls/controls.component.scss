@@ -10,24 +10,24 @@
         }
     }
 
-    .search {
-        width: 88px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-
-        &_theme {
-            padding: 7px;
-            border: 1px solid var(--secondary-color);
-        }
-
-        .search__item {
-            width: 40px;
-        }
-    }
-
     .controls__auth {
         color: var(--secondary-color);
+    }
+}
+
+.search {
+    width: 88px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &_theme {
+        padding: 7px;
+        border: 1px solid var(--secondary-color);
+    }
+
+    .search__item {
+        width: 40px;
     }
 }
