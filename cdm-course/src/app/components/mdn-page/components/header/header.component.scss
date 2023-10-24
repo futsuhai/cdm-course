@@ -1,3 +1,5 @@
+@import "../../../../../mixins.scss";
+
 .header {
     max-width: 1440px;
     margin-left: auto;
@@ -39,13 +41,13 @@
     }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1200px) {
+@include netbook {
     .list {
         gap: 0px;
     }
 }
 
-@media screen and (max-width: 990px) {
+@include tablet- {
     .header {
         display: block;
 

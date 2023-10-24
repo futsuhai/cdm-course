@@ -28,7 +28,7 @@
         text-decoration: underline;
     }
 }
-
+// тут не стал делать отдельный mixin, тк запрос специфичный
 @media screen and (max-width: 660px) {
     .links {
         align-items: flex-start;

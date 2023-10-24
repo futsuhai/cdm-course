@@ -1,3 +1,5 @@
+@import "../../../../../mixins.scss";
+
 .control {
     display: flex;
     align-items: center;
@@ -46,13 +48,13 @@
     }
 }
 
-@media screen and (min-width: 991px) and (max-width: 1200px) {
+@include netbook {
     .control {
         gap: 8px;
     }
 }
 
-@media screen and (max-width: 990px) {
+@include tablet- {
     .control {
         gap: 16px;
         flex-direction: column;
