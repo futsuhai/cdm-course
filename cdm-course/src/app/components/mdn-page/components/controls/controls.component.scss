@@ -5,10 +5,12 @@
 
     .controls__btn {
         &_theme {
+            grid-area: theme;
             padding: 0px 4px;
         }
 
         &_white {
+            grid-area: sign-up;
             padding: 8px 8px;
             font-size: 14px;
             border-radius: 4px;
@@ -18,11 +20,13 @@
     }
 
     .controls__auth {
+        grid-area: log-in;
         color: var(--secondary-color);
     }
 }
 
 .search {
+    grid-area: search;
     width: 88px;
     border-radius: 16px;
     display: flex;
@@ -42,5 +46,36 @@
 @media screen and (min-width: 991px) and (max-width: 1200px) {
     .control {
         gap: 8px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .control {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "theme . ."
+            ". sign-up ."
+            ". log-in ."
+            ". search .";
+
+        .controls__btn {
+            &_white {
+                width: 132px;
+            }
+        }
+
+        .controls__auth {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .search {
+        width: 320px;
+        .search__item {
+            width: 320px;
+        }
     }
 }

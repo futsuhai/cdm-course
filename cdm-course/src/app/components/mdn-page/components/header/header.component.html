@@ -1,8 +1,14 @@
-<header class="header">
+<header class="header" [class.header__mobile]="isBurgerIconActive">
     <div class="logo">
         <img src="assets/css1/logo.svg" alt="logo" class="logo__image">
+        <i 
+            [class.fa-bars]="!isBurgerIconActive"
+            [class.fa-xmark]="isBurgerIconActive"
+            class="fa-solid logo__burger"
+            (click)="toggleBurgerIcon()"
+        ></i>
     </div>
-    <div class="navigation">
+    <div [ngClass]="isBurgerIconActive ? 'header__show-nav' : 'navigation'">
         <nav class="menu">
             <ul class="list">
                 <li class="list__item">
@@ -15,7 +21,7 @@
                         Guides
                     </a>
                 </li>
-                <li class="list__tem">
+                <li class="list__item">
                     <a href="#" class="list__link">
                         Plus
                     </a>
@@ -39,5 +45,4 @@
         </nav>
         <app-controls></app-controls>
     </div>
-    <i class="fa-solid fa-bars header__burger"></i>
 </header>

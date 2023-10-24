@@ -1,6 +1,5 @@
 .wrapper {
     width: 100vw;
-    height: 100vh;
     color: var(--secondary-color);
 
     &_theme_dark {
@@ -46,5 +45,20 @@
 
     &__sections {
         padding-top: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        display: block;
+        padding: 48px;
+
+        &__sidebar{
+            display: none;
+        }
+    
+        &__sections {
+            display: none;
+        }
     }
 }

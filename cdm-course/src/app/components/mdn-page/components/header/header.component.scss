@@ -8,6 +8,18 @@
     justify-content: center;
     gap: 20px;
 
+    &__show-nav {
+        display: flex;
+        flex-direction: column-reverse;
+        max-height: 490px;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     &__burger {
         display: none;
         color: var(--secondary-color);
@@ -41,8 +53,14 @@
 
 @media screen and (max-width: 990px) {
     .header {
-        justify-content: space-between;
-    
+        display: block;
+
+        &__mobile {
+            height: 570px;
+        }
+    }
+
+    .logo {
         &__burger {
             display: block;
         }
@@ -50,5 +68,17 @@
 
     .navigation {
         display: none;
+    }
+
+    .list {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+
+        &__item {
+            padding: 8px;
+            border-top: 1px solid var(--secondary-color);
+        }
     }
 }
