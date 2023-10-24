@@ -6,21 +6,18 @@
         background: var(--primary-color);
     }
 
-    &__header {
-        width: 100vw;
-        padding: 0px 32px;
-        background: var(--primary-color);
+    &__fixed {
         position: fixed;
         top: 0;
+        width: 100vw;
     }
 
-    &__breadcrumb {
-        display: block;
-        margin-top: 65px;
-        border-top: 1px solid var(--white);
-        border-bottom: 1px solid var(--white);
-        padding: 8px 32px;
-        background: var(--background-secondary);
+    &__main {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px 32px;
+        margin-top: 93px;
     }
 
     &__footer {
@@ -30,17 +27,37 @@
     }
 }
 
-.main {
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 32px;
-    grid-gap: 48px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 15rem);
+.fixed-container {
+    &_theme_dark {
+        background: var(--primary-color);
+    }
 
-    &__content {
-        padding: 48px 0;
+    &__header {
+        display: block;
+        padding: 0px 32px;
+    }
+
+    &__breadcrumb {
+        padding: 8px 32px;
+        height: 34px;
+        border-top: 1px solid var(--white);
+        border-bottom: 1px solid var(--white);
+    }
+}
+
+.breadcrumb-container {
+    display: block;
+
+    &_theme_dark {
+        background: var(--background-secondary);
+    }
+}
+
+.sidebar-container {
+    display: contents;
+
+    &__sidebar {
+        padding: 8px 0;
     }
 
     &__sections {
@@ -48,16 +65,53 @@
     }
 }
 
+.main {
+    display: block;
+    grid-gap: 48px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 15rem);
+    grid-template-areas: "sidebar main sections";
+
+    &__content {
+        grid-area: main;
+        padding: 48px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .main {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+        grid-template-areas: "sidebar main";
+
+        &__content {
+            grid-area: main;
+            padding: 48px;
+        }
+    }
+
+    .sidebar-container {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+
+        &__sections {
+            padding-top: 48px;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .main {
         display: block;
         padding: 48px;
+    }
 
-        &__sidebar{
+    .sidebar-container {
+        &__sections {
             display: none;
         }
-    
-        &__sections {
+
+        &__sidebar {
             display: none;
         }
     }

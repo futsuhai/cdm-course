@@ -1,10 +1,16 @@
 <div class="wrapper wrapper_theme_dark">
-    <app-header class="wrapper__header"></app-header>
-    <app-breadcrumb class="wrapper__breadcrumb"></app-breadcrumb>
-    <main class="main">
-        <app-sidebar class="main__sidebar" ></app-sidebar>
+    <div class="fixed-container fixed-container_theme_dark wrapper__fixed">
+        <app-header class="fixed-container__header"></app-header>
+        <div class="breadcrumb-container breadcrumb-container_theme_dark fixed-container__breadcrumb">
+            <app-breadcrumb class="breadcrumb-container__breadcrumb"></app-breadcrumb>
+        </div>
+    </div>
+    <main class="main wrapper__main">
+        <div class="sidebar-container">
+            <app-sidebar class="sidebar-container__sidebar" ></app-sidebar>
+            <app-sections class="sidebar-container__sections"></app-sections>
+        </div>
         <app-content class="main__content"></app-content>
-        <app-sections class="main__sections"></app-sections>
     </main>
     <app-footer class="wrapper__footer"></app-footer>
 </div>
